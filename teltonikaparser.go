@@ -50,6 +50,8 @@ func Decode(bs *[]byte) (Decoded, error) {
 	var err error
 	var nextByte int
 
+	fmt.Printf("test new repository")
+
 	// check for minimum packet size
 	if len(*bs) < 45 {
 		return Decoded{}, fmt.Errorf("Minimum packet size is 45 Bytes, got %v", len(*bs))
